@@ -4,7 +4,7 @@
 #define MAX 256
 
 int main(){
-    char *nFile = "input.txt";
+    char *nFile = "../input.txt";
     FILE *fp = fopen(nFile, "r");
     if(fp == NULL) {
         printf("Error opening input file");
@@ -15,6 +15,7 @@ int main(){
     int current, highest, sum = 0;
 
     while (fgets(buffer, MAX, fp)){
+
         current = atoi(buffer);
         if(current == 0){
             if(sum > highest) highest = sum;
